@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/curriculo.css">
+  <title th:text="${title}"></title>
+</head>
+<body>
+  <div class="container">
+    <h1>Currículo</h1>
+    <h2>Dados Pessoais</h2>
+    <ul>
+      <li><strong>Nome:</strong> <span th:text="${nome}"></span></li>
+      <li><strong>Email:</strong> <span th:text="${email}"></span></li>
+      <li><strong>Telefone:</strong> <span th:text="${telefone}"></span></li>
+      <li><strong>Data de Nascimento:</strong> <span th:text="${nascimento}"></span></li>
+    </ul>
+
+    <h2>Informações Adicionais</h2>
+    <ul>
+      <li><strong>Cargo:</strong> <span th:text="${cargo}"></span></li>
+      <li><strong>Linkedin:</strong> <a th:text="${linkedin}" th:href="${linkedin}"></a></li>
+      <li><strong>Github:</strong> <a th:text="${github}" th:href="${github}"></a></li>
+    </ul>
+
+    <h2>Linguagens</h2>
+    <ul>
+      <li><strong>Linguagens:</strong> <span th:text="${linguagens}"></span></li>
+    </ul>
+  </div>
+</body>
+</html>

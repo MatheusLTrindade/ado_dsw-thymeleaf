@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/index.css">
+  <title>Formulário</title>
+</head>
+<body>
+  <h1>Crie seu curriculo.</h1>
+  <form th:object=${dados} action="curriculo" method="post">
+    <input th:field="*{nome}" type="text" name="nome" id="nome" placeholder="Nome completo">
+    <input th:field="*{email}" type="email" name="email" id="email" placeholder="Email">
+    <div class="group">
+      <input th:field="*{telefone}" type="tel" name="telefone" id="telefone" placeholder="(xx) x xxxx-xxxx">
+      <input th:field="*{nascimento}" type="date" name="nascimento" id="nascimento">
+    </div>
+    <input th:field="*{cargo}" type="text" name="cargo" id="cargo" placeholder="Cargo">
+    <input th:field="*{linkedin}" type="url" name="linkedin" id="linkedin" placeholder="Linkedin">
+    <input th:field="*{github}" type="url" name="github" id="github" placeholder="Github">
+    <div class="container">
+      <div class="row">
+        <ul style="list-style-type: none;">
+          <label for="linguagens">Linguagens:</label>
+          <li><input th:field="*{linguagens}" type="checkbox" name="linguagens" value="Typescript">Typescript</li>
+          <li><input th:field="*{linguagens}" type="checkbox" name="linguagens" value="Javascript">Javascript</li>
+          <li><input th:field="*{linguagens}" type="checkbox" name="linguagens" value="Java">Java</li>
+          <li><input th:field="*{linguagens}" type="checkbox" name="linguagens" value="Python">Python</li>
+          <li><input th:field="*{linguagens}" type="checkbox" name="linguagens" value="R">R</li>
+          <li><input th:field="*{linguagens}" type="checkbox" name="linguagens" value="C#">C#</li>
+        </ul>
+      </div>
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
